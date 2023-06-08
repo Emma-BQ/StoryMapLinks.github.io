@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hover Image Description</title>
+  <style>
+    .image-container {
+      position: relative;
+      display: inline-block;
+      width: 30%;
+      margin: 10px;
+    }
+
+    .image-description {
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      transform: translate(-20%, -20%);
+      background-color: rgba(245, 245, 220, 0.7);
+      opacity: 0;
+      padding: 10px;
+      transition: opacity 0.3s ease;
+    }
+
+    .image-container:hover .image-description {
+      opacity: 1;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Newfoundland_Pine_Marten.jpg" alt="Image 1">
+    <div class="image-description">
+      <p>Body size: 50 cm</p>
+      <p>Environmental Preference: Coniferous Forests</p>
+      <p>Diet: Likes to eat berries</p>
+      <p>Fun fact:</p>
+      <p>Very difficult to find in North America because they love to hide everywhere they can.</p>
+    </div>
+  </div>
+
+  <div class="image-container">
+    <img src="https://dep.nj.gov/wp-content/uploads/njfw/bear-in-grass-scaled.jpg" alt="Image 2">
+    <div class="image-description">
+      <p>Body size: 5 m</p>
+      <p>Environmental Preference: Leafy forests</p>
+      <p>Diet: Depends, black bears are pretty territorial but they love a good berry. They will also eat meat based on what they can forage.</p>
+      <p>Fun fact:</p>
+      <p>Very difficult to find in North America because they love to hide everywhere they can.</p>
+    </div>
+  </div>
+
+  <div class="image-container">
+    <img src="https://static.scientificamerican.com/sciam/cache/file/B5AB716C-A419-44FB-82FEFB52EEC79000_source.jpg" alt="Image 3">
+    <div class="image-description">
+      <p>Body size: 5 m</p>
+      <p>Environmental Preference: Leafy forests</p>
+      <p>Diet: Depends, black bears are pretty territorial but they love a good berry. They will also eat meat based on what they can forage.</p>
+      <p>Fun fact:</p>
+      <p>Very difficult to find in North America because they love to hide everywhere they can.</p>
+    </div>
+  </div>
+
+  <div class="image-container">
+    <img src="https://www.kidzone.ws/lw/frogs/images/wood-frog.jpg" alt="Image 4">
+    <div class="image-description">
+      <p>Body size: 5 m</p>
+      <p>Environmental Preference: Leafy forests</p>
+      <p>Diet: Depends, black bears are pretty territorial but they love a good berry. They will also eat meat based on what they can forage.</p>
+      <p>Fun fact:</p>
+      <p>Very difficult to find in North America because they love to hide everywhere they can.</p>
+    </div>
+  </div>
+
+</body>
+</html>
