@@ -17,8 +17,8 @@
     }
 
     .image-circle {
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       overflow: hidden;
       margin-bottom: 10px;
@@ -87,3 +87,8 @@
   </div>
 </body>
 </html>
+<!-- The width and height of the .image-circle class were set to the same value (e.g., 200px) to create a square shape, which can accommodate the circular image.
+The border-radius property was set to 50%, making the corners of the square element rounded and transforming it into a circle.
+The .image-circle img class has width and height properties set to 100% to make the image fill the entire space of the circular container.
+The object-fit: cover property was used to maintain the image's aspect ratio and ensure it covers the entire space within the circular container. This may crop or stretch the image as needed to fit the container.
+The overflow: hidden property was applied to the .image-circle class to clip any parts of the image that exceed the circular boundary, ensuring that only the portion within the circle is visible. -->
