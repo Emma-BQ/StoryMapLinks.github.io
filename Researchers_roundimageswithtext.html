@@ -5,10 +5,20 @@
   <style>
     /* Make the classes for later */
     body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0; /* Remove margin to eliminate white space around the page */
+      padding: 0; /* Remove padding to eliminate white space around the page */
+    }
+
+    .image-section-container {
+      position: relative;
+      width: 25%; /* Adjust the width as needed */
+      height: 100vh; /* Adjust the height as needed */
+      overflow: hidden;
+    }
+
     .image-container {
       display: inline-block;
       margin: 10px;
@@ -16,11 +26,11 @@
     }
 
     .image-circle {
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       overflow: hidden;
-      margin-bottom: 0;
+      margin-bottom: 10px;
       align-content: center;
     }
 
@@ -34,6 +44,11 @@
     .image-description {
       text-align: center;
       margin-top: 5px;
+    }
+
+    /* Hide the rest of the page content */
+    .page-content {
+      display: none;
     }
   </style>
 </head>
