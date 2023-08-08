@@ -1,0 +1,18 @@
+/* Style for the button */
+.expandButton {
+    cursor: pointer;
+    background-color: forestgreen;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+/* Style for the content */
+.content {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
