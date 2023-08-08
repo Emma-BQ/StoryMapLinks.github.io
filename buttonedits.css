@@ -3,16 +3,10 @@
     cursor: pointer;
     background-color: forestgreen;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 30px; /* Adjust padding to make the button bigger */
     border: none;
     border-radius: 10px;
     font-size: 16px;
-}
-
-/* Style for the content */
-.content {
-    display: none;
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin-top: 10px;
+    display: block; /* Set display to block to center the button */
+    margin: 0 auto; /* Center the button horizontally */
 }
