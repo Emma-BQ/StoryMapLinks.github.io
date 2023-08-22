@@ -1,0 +1,24 @@
+.story-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.term {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.term-title {
+    background-color: darkgreen;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.definition {
+    display: none;
+    margin-top: 10px;
+}
