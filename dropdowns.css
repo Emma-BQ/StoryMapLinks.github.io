@@ -1,12 +1,16 @@
+body {
+    margin: 0; /* Remove default body margin */
+}
+
 .story-container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto; /* Center the container */
     padding: 20px;
 }
 
 .term {
-    text-align: center; /* Center the buttons horizontally */
-    margin-bottom: 20px;
+    display: inline-block; /* Display terms side by side */
+    margin: 10px; /* Adjust spacing between terms */
     cursor: pointer;
 }
 
