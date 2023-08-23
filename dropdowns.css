@@ -5,6 +5,7 @@
 }
 
 .term {
+    text-align: center; /* Center the buttons horizontally */
     margin-bottom: 20px;
     cursor: pointer;
 }
