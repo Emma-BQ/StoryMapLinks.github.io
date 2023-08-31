@@ -5,11 +5,21 @@
   <style>
     .image-container {
       position: relative;
-      display: inline-block;
-      width: 24%; /* 4 images in a row */
-      margin: 0;
-      padding: 0;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%; /* Maintain a square aspect ratio for each cell */
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      object-fit: cover;
     }
 
     .image-description {
@@ -20,22 +30,28 @@
       height: 100%;
       background-color: rgba(245, 245, 220, 0.9);
       opacity: 0;
-      padding: 5%;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       transition: opacity 0.3s ease;
+      text-align: center;
     }
 
     .image-container:hover .image-description {
       opacity: 1;
     }
 
-    .image-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px; /* Gap between cells */
     }
   </style>
 </head>
 <body>
+<div class="grid-container">
   <div class="image-container">
     <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Newfoundland_Pine_Marten.jpg" alt="Image 1">
     <div class="image-description">
@@ -46,9 +62,13 @@
       <p>Fun fact: They are difficult to spot because they are fast and good at hiding like weasels. They are agile climbers but tend to hunt on the ground especially underneath downed trees and stumps, inside hollow trees, and in dense clumps of young conifers. In the winter, they hunt beneath tunnels carved out by red squirrels or under snow-covered logs.  </p>
     </div>
   </div>
+</div>
+<div class="grid-container">
   <div class="image-container">
-    <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQHTrDOHedErNntOvkblw5XDKPDEEeTMZxAdvjjNKjSf1ntPruL_riZzi9cQ0KNg4_7o7Vqxtx9--SC-zI" alt="Image 2">
+    <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQHTrDOHedErNntOvkblw5XDKPDEEeTMZxAdvjjNKjSf1ntPruL_riZzi9cQ0KNg4_7o7Vqxtx9--SC-zI" alt="Image 2">    </div>
   </div>
+</div>
+<div class="grid-container">
   <div class="image-container">
     <img src="https://dep.nj.gov/wp-content/uploads/njfw/bear-in-grass-scaled.jpg" alt="Image 3">
     <div class="image-description">
@@ -59,9 +79,13 @@
       <p>Fun fact:Even though they weigh a lot, a black bear can run up to 45 km/h ! Also, there is a subspecies called the spirit bear in B.C.'s Great Bear Rainforest, and it has a creamy white fur. </p>
     </div>
   </div>
+</div>
+<div class="grid-container">
   <div class="image-container">
     <img src="https://nhpbs.org/wild/images/woodfrognpsmed.jpg" alt="Image 4">
   </div>
+</div>
+<div class="grid-container">
   <div class="image-container">
     <img src="https://static.scientificamerican.com/sciam/cache/file/B5AB716C-A419-44FB-82FEFB52EEC79000_source.jpg" alt="Image 5">
     <div class="image-description">
@@ -72,9 +96,13 @@
       <p>Fun fact:This small common burrowing mammal has what is called "toxic saliva" to mobilize their prey and defend themselves, however it is not dangerous to humans or domestic animals. </p>
     </div>
   </div>
+</div>
+<div class="grid-container">
   <div class="image-container">
     <img src="https://yukon.ca/sites/yukon.ca/files/env/env-imgs/env-marten_2.jpg" alt="Image 6">
   </div>
+</div>
+<div class="grid-container">
   <div class="image-container">
     <img src="https://www.kidzone.ws/lw/frogs/images/wood-frog.jpg" alt="Image 7">
     <div class="image-description">
@@ -85,9 +113,12 @@
       <p>Fun fact:How do frogs survive during the canadian winters ? They freeze, quite literally by stopping their breathing and their hearts thanks to an antifreeze substance that prevents ice from freezing within their cells, instead only freezing between.</p>
     </div>
   </div>
+</div>
+<div class="grid-container">
   <div class="image-container">
     <img src="https://worldanimalfoundation.org/wp-content/uploads/2022/08/black-bear-review.jpg" alt="Image 8">
   </div>
+</div>
 
 </body>
 </html>
