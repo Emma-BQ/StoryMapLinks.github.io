@@ -3,22 +3,23 @@
 <head>
   <title>Hover Image Description</title>
   <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px; /* Gap between images */
+    }
+
     .image-container {
       position: relative;
       width: 100%;
-      height: 0;
       padding-bottom: 100%; /* Maintain a square aspect ratio for each cell */
       overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       margin: 0;
     }
 
     .image-container img {
       max-width: 100%;
       max-height: 100%;
-      display: block;
       object-fit: cover;
     }
 
@@ -30,88 +31,82 @@
       height: 100%;
       background-color: rgba(245, 245, 220, 0.9);
       opacity: 0;
-      padding: 10px;
+      padding: 20px;
+      transition: opacity 0.3s ease;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      transition: opacity 0.3s ease;
       text-align: center;
     }
 
     .image-container:hover .image-description {
       opacity: 1;
     }
-
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2px; /* Gap between cells */
-    }
   </style>
 </head>
 <body>
-<div class="grid-container">
-  <div class="image-container">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Newfoundland_Pine_Marten.jpg" alt="Image 1">
-    <div class="image-description">
-      <p>Name: American Marten </p>
-      <p>Body size: They are long, slender and sleek with short legs and a bushy tail as can be seen in the photograph. Can live for up to 7 years. Excluding the tail, their body length can vary between 48-65 cm. </p>
-      <p>Environmental Preference: Coniferous Forests, but mixed as well, since they provide a dense habitat perfect for hunting prey and shelter. </p>
-      <p>Diet: Carnivore, eats small mammals like squirrels and rodents, or birds/fruit/nuts/insects and dead flesh </p>
-      <p>Fun fact: They are difficult to spot because they are fast and good at hiding like weasels. They are agile climbers but tend to hunt on the ground especially underneath downed trees and stumps, inside hollow trees, and in dense clumps of young conifers. In the winter, they hunt beneath tunnels carved out by red squirrels or under snow-covered logs.  </p>
+  <div class="grid-container">
+    <div class="image-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Newfoundland_Pine_Marten.jpg" alt="Image 1">
+      <div class="image-description">
+        <p>Name: American Marten </p>
+        <p>Body size: They are long, slender and sleek with short legs and a bushy tail as can be seen in the photograph. Can live for up to 7 years. Excluding the tail, their body length can vary between 48-65 cm. </p>
+        <p>Environmental Preference: Coniferous Forests, but mixed as well, since they provide a dense habitat perfect for hunting prey and shelter. </p>
+        <p>Diet: Carnivore, eats small mammals like squirrels and rodents, or birds/fruit/nuts/insects and dead flesh </p>
+        <p>Fun fact: They are difficult to spot because they are fast and good at hiding like weasels. They are agile climbers but tend to hunt on the ground especially underneath downed trees and stumps, inside hollow trees, and in dense clumps of young conifers. In the winter, they hunt beneath tunnels carved out by red squirrels or under snow-covered logs.  </p>
+      </div>
     </div>
-  </div>
-<div class="grid-container">
-  <div class="image-container">
-    <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQHTrDOHedErNntOvkblw5XDKPDEEeTMZxAdvjjNKjSf1ntPruL_riZzi9cQ0KNg4_7o7Vqxtx9--SC-zI" alt="Image 2">    </div>
-  </div>
-<div class="grid-container">
-  <div class="image-container">
-    <img src="https://dep.nj.gov/wp-content/uploads/njfw/bear-in-grass-scaled.jpg" alt="Image 3">
-    <div class="image-description">
-      <p>Name: Black Bear
-      <p>Body size: Their length can vary between 1.5 to 1.8 metres, but their weight can get very high especially in the winter when they are bulking before they rest for a while. Males range between 115 to 270 kg, and females range between 92-140 kg.</p>
-      <p>Environmental Preference: All three types, they like to roam around. </p>
-      <p>Diet: They are omnivorous so they eat everything. It really depends on what is available. Usually, they will eat fish, insects, berries, vegetation, small mammals, etc. but where human developments are numerous, they can even eat grains or trash.</p>
-      <p>Fun fact:Even though they weigh a lot, a black bear can run up to 45 km/h ! Also, there is a subspecies called the spirit bear in B.C.'s Great Bear Rainforest, and it has a creamy white fur. </p>
+  <div class="grid-container">
+    <div class="image-container">
+      <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQHTrDOHedErNntOvkblw5XDKPDEEeTMZxAdvjjNKjSf1ntPruL_riZzi9cQ0KNg4_7o7Vqxtx9--SC-zI" alt="Image 2">
     </div>
-  </div>
-<div class="grid-container">
-  <div class="image-container">
-    <img src="https://nhpbs.org/wild/images/woodfrognpsmed.jpg" alt="Image 4">
-  </div>
-<div class="grid-container">
-  <div class="image-container">
-    <img src="https://static.scientificamerican.com/sciam/cache/file/B5AB716C-A419-44FB-82FEFB52EEC79000_source.jpg" alt="Image 5">
-    <div class="image-description">
+  <div class="grid-container">
+    <div class="image-container">
+      <img src="https://dep.nj.gov/wp-content/uploads/njfw/bear-in-grass-scaled.jpg" alt="Image 3">
+      <div class="image-description">
+        <p>Name: Black Bear
+        <p>Body size: Their length can vary between 1.5 to 1.8 metres, but their weight can get very high especially in the winter when they are bulking before they rest for a while. Males range between 115 to 270 kg, and females range between 92-140 kg.</p>
+        <p>Environmental Preference: All three types, they like to roam around. </p>
+        <p>Diet: They are omnivorous so they eat everything. It really depends on what is available. Usually, they will eat fish, insects, berries, vegetation, small mammals, etc. but where human developments are numerous, they can even eat grains or trash.</p>
+        <p>Fun fact:Even though they weigh a lot, a black bear can run up to 45 km/h ! Also, there is a subspecies called the spirit bear in B.C.'s Great Bear Rainforest, and it has a creamy white fur. </p>
+      </div>
+    </div>
+  <div class="grid-container">
+    <div class="image-container">
+      <img src="https://nhpbs.org/wild/images/woodfrognpsmed.jpg" alt="Image 4">
+    </div>
+  <div class="grid-container">
+    <div class="image-container">
+      <img src="https://static.scientificamerican.com/sciam/cache/file/B5AB716C-A419-44FB-82FEFB52EEC79000_source.jpg" alt="Image 5">
+      <div class="image-description">
       <p>Name: Northern short-tailed shrew </p>
       <p>Body size: 75 - 105 mm long and lives 1.5 years. </p>
       <p>Environmental Preference: Capable of adapting to a wide range of habitats, like meadows, old fields, marshy areas, gardens and even more developed zones, but prefers deciduous forests, old mixed forests, and understory areas as a safe haven from predators. </p>
       <p>Diet: Primarily feeds on earthworms found in damp soils, insects, and other invertebrates. </p>
       <p>Fun fact:This small common burrowing mammal has what is called "toxic saliva" to mobilize their prey and defend themselves, however it is not dangerous to humans or domestic animals. </p>
+      </div>
     </div>
-  </div>
-<div class="grid-container">
-  <div class="image-container">
-    <img src="https://yukon.ca/sites/yukon.ca/files/env/env-imgs/env-marten_2.jpg" alt="Image 6">
-  </div>
-<div class="grid-container">
-  <div class="image-container">
-    <img src="https://www.kidzone.ws/lw/frogs/images/wood-frog.jpg" alt="Image 7">
-    <div class="image-description">
+  <div class="grid-container">
+    <div class="image-container">
+      <img src="https://yukon.ca/sites/yukon.ca/files/env/env-imgs/env-marten_2.jpg" alt="Image 6">
+    </div>
+  <div class="grid-container">
+    <div class="image-container">
+      <img src="https://www.kidzone.ws/lw/frogs/images/wood-frog.jpg" alt="Image 7">
+      <div class="image-description">
       <p>Name: Wood Frog </p>
       <p>Body size:  Adults are 3.8 to 8.2 centimeters in length.</p>
       <p>Environmental Preference: All three types of forests where they can hide in leaf litter during the winter, or lay their eggs in stagnant bodies of water. </p>
       <p>Diet: Insects, arachnids, worms, slugs, and snails. Tadpoles eat algae and decaying plant matter.</p>
       <p>Fun fact:How do frogs survive during the canadian winters ? They freeze, quite literally by stopping their breathing and their hearts thanks to an antifreeze substance that prevents ice from freezing within their cells, instead only freezing between.</p>
+      </div>
+    </div>
+  <div class="grid-container">
+    <div class="image-container">
+      <img src="https://worldanimalfoundation.org/wp-content/uploads/2022/08/black-bear-review.jpg" alt="Image 8">
     </div>
   </div>
-<div class="grid-container">
-  <div class="image-container">
-    <img src="https://worldanimalfoundation.org/wp-content/uploads/2022/08/black-bear-review.jpg" alt="Image 8">
-  </div>
-</div>
 
 </body>
 </html>
