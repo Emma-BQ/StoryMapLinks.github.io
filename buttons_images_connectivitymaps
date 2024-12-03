@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buttons Example</title>
+  <style>
+    /* Container for buttons */
+    .button-container {
+      display: flex;
+      justify-content: center; /* Center the buttons horizontally */
+      gap: 10px; /* Space between the buttons */
+      margin: 20px;
+    }
+
+    /* Common button styles */
+    .custom-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #0079c1; /* Primary color */
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    /* Hover effect */
+    .custom-button:hover {
+      background-color: #005fa3; /* Darker shade on hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <!-- Button for Species-Specific Figures -->
+    <a href="#species-specific-figures" class="custom-button">Species-Specific Figures</a>
+    <!-- Button for Appendix | Study -->
+    <a href="#appendix-study" class="custom-button">Appendix | Study</a>
+  </div>
+</body>
+</html>
