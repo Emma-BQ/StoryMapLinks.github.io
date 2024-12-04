@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buttons Example</title>
+  <title>Styled Buttons</title>
   <style>
-    /* Container for buttons */
+    /* Center the button container */
     .button-container {
       display: flex;
       justify-content: center; /* Center the buttons horizontally */
@@ -13,34 +13,34 @@
       margin: 20px;
     }
 
-    /* Common button styles */
+    /* Button styles */
     .custom-button {
       padding: 20px 30px;
       font-size: 18px;
-      color: white;
-      background-color: #02b812; /* Primary color */
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
+      color: #000; /* Text color */
+      background-color: #8ef2a7; /* Light green background */
+      border: 2px solid #02b812; /* Green border */
+      border-radius: 50px; /* Rounded edges */
+      text-decoration: none; /* Remove underline */
       text-align: center;
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: all 0.3s; /* Smooth transition for hover effect */
     }
 
     /* Hover effect */
     .custom-button:hover {
-      background-color: #018a0d; /* Darker shade on hover */
+      background-color: #02b812; /* Darker green background on hover */
+      color: white; /* White text on hover */
     }
   </style>
 </head>
 <body>
   <div class="button-container">
-    <!-- Species-Specific Figures -->
+    <!-- Buttons -->
     <a href="https://quebio.ca/sites/default/files/Annexe_2019_06_12.pdf" 
        class="custom-button" target="_blank" rel="noopener noreferrer">
       Species-Specific Figures
     </a>
-    <!-- Appendix | Study -->
     <a href="https://quebio.ca/sites/default/files/reports/Modelisation_connectivite_btsl_octobre2021_annexe_en.pdf" 
        class="custom-button" target="_blank" rel="noopener noreferrer">
       Appendix | Study
