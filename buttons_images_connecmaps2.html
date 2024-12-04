@@ -8,72 +8,119 @@
     /* General page styling */
     body {
       font-family: Georgia, sans-serif;
-      text-align: center; /* Center align all content */
+      text-align: center;
       margin: 0;
       padding: 0;
-      background-color: #f8f9fa; /* Light background color */
+      background-color: #f8f9fa;
     }
 
     /* Button container styles */
     .button-container {
       display: flex;
-      justify-content: center; /* Center buttons horizontally */
-      gap: 30px; /* Space between buttons */
-      margin: 20px 0 40px; /* Add extra margin-bottom to separate from images */
+      justify-content: center;
+      gap: 30px;
+      margin: 20px 0 40px;
     }
 
     /* Button styles */
     .custom-button {
       padding: 15px 25px;
       font-size: 18px;
-      color: #000; /* Text color */
-      background-color: #8ef2a7; /* Light green background */
-      border: 2px solid #02b812; /* Green border */
-      border-radius: 50px; /* Rounded edges */
+      color: #000;
+      background-color: #8ef2a7;
+      border: 2px solid #02b812;
+      border-radius: 50px;
       text-decoration: none;
-      text-align: center;
       cursor: pointer;
       transition: all 0.3s;
     }
 
-    /* Hover effect for buttons */
     .custom-button:hover {
-      background-color: #02b812; /* Darker green background */
-      color: white; /* White text */
+      background-color: #02b812;
+      color: white;
     }
 
     /* Image grid container */
     .image-grid {
-      display: inline-grid; /* Use inline-grid to center images horizontally */
-      grid-template-columns: repeat(2, 1fr); /* Two images per row */
-      gap: 30px; /* Space between images */
-      justify-content: center; /* Center images within the grid */
-      margin: 40px auto; /* Space above and below the image grid */
+      display: inline-grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      justify-content: center;
+      margin: 40px auto;
     }
 
     /* Image styling */
     .image-grid img {
-      width: 100%; /* Make images responsive */
-      max-width: 500px; /* Larger images */
-      height: auto; /* Maintain aspect ratio */
-      border: 2px solid #ccc; /* Optional: Add a border around images */
-      border-radius: 5px; /* Rounded edges */
-      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer; /* Make it clear the image is clickable */
+      transition: transform 0.3s ease;
+    }
+
+    .image-grid img:hover {
+      transform: scale(1.05);
     }
 
     /* Description styling */
     .description {
-      margin-top: 10px; /* Space between image and description */
-      font-size: 16px; /* Readable font size */
-      color: #555; /* Soft gray color */
+      margin-top: 10px;
+      font-size: 16px;
+      color: #555;
     }
 
     /* Header styling */
     .header {
-      margin: 20px 0 10px; /* Space around the header */
+      margin: 20px 0 10px;
       font-size: 24px;
       font-weight: bold;
       color: #333;
+    }
+
+    /* Modal background */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Modal content (image) */
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 800px;
+    }
+
+    /* Caption inside the modal */
+    #caption {
+      margin: 15px auto;
+      text-align: center;
+      color: #ccc;
+      font-size: 18px;
+    }
+
+    /* Close button */
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #bbb;
     }
   </style>
 </head>
@@ -90,21 +137,60 @@
   <!-- Image grid section -->
   <div class="image-grid">
     <div>
-      <img src="https://emma-bq.github.io/ESRI_Images_Draft.github.io/protectedareas_lowlands.png" alt="Protected Areas in the St.Lawrence Lowlands">
+      <img src="https://emma-bq.github.io/ESRI_Images_Draft.github.io/protectedareas_lowlands.png" alt="Protected Areas in the St. Lawrence Lowlands" class="clickable-image">
       <p class="description">Protected Areas in the St. Lawrence Lowlands</p>
     </div>
     <div>
-      <img src="https://emma-bq.github.io/ESRI_Images_Draft.github.io/conservationpriorities_naturalarea_legend(eng).png" alt="Conservation priorities for natural areas in the St. Lawrence Lowlands">
+      <img src="https://emma-bq.github.io/ESRI_Images_Draft.github.io/conservationpriorities_naturalarea_legend(eng).png" alt="Conservation priorities for natural areas in the St. Lawrence Lowlands" class="clickable-image">
       <p class="description">Conservation Priorities for Natural Areas</p>
     </div>
     <div>
-      <img src="https://emma-bq.github.io/ESRI_Images_Draft.github.io/EcologicalConnectivityDecrease.png" alt="Expected change in ecological connectivity under the BAU_85 scenario between 2010 and 2110.">
+      <img src="https://emma-bq.github.io/ESRI_Images_Draft.github.io/EcologicalConnectivityDecrease.png" alt="Expected change in ecological connectivity under the BAU_85 scenario between 2010 and 2110." class="clickable-image">
       <p class="description">Expected Change in Ecological Connectivity (BAU_85)</p>
     </div>
     <div>
-      <img src="https://emma-bq.github.io/ESRI_Images_Draft.github.io/maximaldispersal(importancelevelsparcels)_legend(eng).PNG" alt="Importance of habitat patches for habitat network connectivity in the St. Lawrence Lowlands according to maximum dispersal of target species">
+      <img src="https://emma-bq.github.io/ESRI_Images_Draft.github.io/maximaldispersal(importancelevelsparcels)_legend(eng).PNG" alt="Importance of habitat patches for habitat network connectivity in the St. Lawrence Lowlands according to maximum dispersal of target species" class="clickable-image">
       <p class="description">Importance of Habitat Patches for Connectivity</p>
     </div>
   </div>
+
+  <!-- Modal structure -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+  </div>
+
+  <script>
+    // Get modal elements
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const captionText = document.getElementById("caption");
+
+    // Get all clickable images
+    const images = document.querySelectorAll(".clickable-image");
+
+    // Add click event to images
+    images.forEach(img => {
+      img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt; // Use alt text as caption
+      };
+    });
+
+    // Close modal when close button is clicked
+    const close = document.getElementsByClassName("close")[0];
+    close.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    // Close modal when clicking outside the image
+    window.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
 </body>
 </html>
