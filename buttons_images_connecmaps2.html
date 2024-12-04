@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buttons and Images</title>
+  <style>
+    /* Button container styles */
+    .button-container {
+      display: flex;
+      justify-content: center; /* Center buttons horizontally */
+      gap: 30px; /* Space between buttons */
+      margin: 20px 0;
+    }
+
+    /* Button styles */
+    .custom-button {
+      padding: 20px 30px;
+      font-size: 18px;
+      color: #000; /* Text color */
+      background-color: #8ef2a7; /* Light green background */
+      border: 2px solid #02b812; /* Green border */
+      border-radius: 50px; /* Rounded edges */
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    /* Hover effect for buttons */
+    .custom-button:hover {
+      background-color: #02b812; /* Darker green background */
+      color: white; /* White text */
+    }
+
+    /* Image grid container */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two images per row */
+      gap: 20px; /* Space between images */
+      justify-content: center;
+      margin: 20px;
+    }
+
+    /* Image styling */
+    .image-grid img {
+      width: 100%; /* Make images responsive */
+      max-width: 500px; /* Limit image size */
+      border: 2px solid #ccc; /* Optional: Add a border around images */
+      border-radius: 5px; /* Rounded edges */
+    }
+
+    /* Optional: Caption styling */
+    .caption {
+      text-align: center;
+      font-size: 16px;
+      margin-top: 10px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- Button section -->
+  <div class="button-container">
+    <a href="https://quebio.ca/sites/default/files/Annexe_2019_06_12.pdf" class="custom-button" target="_blank" rel="noopener noreferrer">Species-Specific Figures</a>
+    <a href="https://quebio.ca/sites/default/files/reports/Modelisation_connectivite_btsl_octobre2021_annexe_en.pdf" class="custom-button" target="_blank" rel="noopener noreferrer">Appendix | Study</a>
+  </div>
+
+  <!-- Image grid section -->
+  <div class="image-grid">
+    <div>
+      <img src="image1.jpg" alt="Image 1 Description">
+      <div class="caption">Protected Areas in the St. Lawrence Lowlands</div>
+    </div>
+    <div>
+      <img src="image2.jpg" alt="Image 2 Description">
+      <div class="caption">Species Connectivity Map</div>
+    </div>
+    <div>
+      <img src="image3.jpg" alt="Image 3 Description">
+      <div class="caption">Habitat Analysis</div>
+    </div>
+    <div>
+      <img src="image4.jpg" alt="Image 4 Description">
+      <div class="caption">Biodiversity Heatmap</div>
+    </div>
+  </div>
+</body>
+</html>
