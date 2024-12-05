@@ -37,18 +37,34 @@
 <body>
   <div class="button-container">
     <!-- Buttons -->
-  <a href="https://emma-bq.github.io/ESRI_Images_Draft.github.io/Annexe_2019_06_12-compressed.pdf" 
+    <a href="https://quebio.ca/sites/default/files/Annexe_2019_06_12.pdf" 
+       class="custom-button" target="_blank" rel="noopener noreferrer">
+      Species-Specific Figures (FR)
+    </a>
+    <a href="https://quebio.ca/sites/default/files/reports/Modelisation_connectivite_btsl_octobre2021_annexe_en.pdf" 
+       class="custom-button" target="_blank" rel="noopener noreferrer">
+      Appendix | Study
+    </a>
+    <a href="https://emma-bq.github.io/ESRI_Images_Draft.github.io/Modelisation_connectivite_btsl_octobre2021_annexe.pdf" 
      class="custom-button" target="_blank" rel="noopener noreferrer">
-    Species-Specific Figures (FR only)
+      Annexe (FR) | Étude 2021
   </a>
-  <a href="https://emma-bq.github.io/ESRI_Images_Draft.github.io/Modelisation_connectivite_btsl_octobre2021_annexe_en.pdf" 
-     class="custom-button" target="_blank" rel="noopener noreferrer">
-    Appendix (ENG) | Study 2021
-  </a>
-  <a href="https://emma-bq.github.io/ESRI_Images_Draft.github.io/Modelisation_connectivite_btsl_octobre2021_annexe.pdf" 
-     class="custom-button" target="_blank" rel="noopener noreferrer">
-    Annexe (FR) | Étude 2021
-  </a>
-</div>
+  </div>
+
+  <!-- Script to open links in a secure manner -->
+  <script>
+    // Ensure external links use the correct context
+    document.querySelectorAll('.custom-button').forEach(button => {
+      button.addEventListener('click', event => {
+        // Use window.open for strict HTTPS links
+        const url = event.currentTarget.href;
+        if (url.startsWith('https://')) {
+          window.open(url, '_blank', 'noopener,noreferrer');
+        } else {
+          alert('This link is not secure and may not work.');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
