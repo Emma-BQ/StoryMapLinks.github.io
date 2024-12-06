@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDFs Side by Side</title>
+  <style>
+    /* Container for PDFs */
+    .pdf-container {
+      display: flex;
+      justify-content: space-around; /* Space out the PDFs evenly */
+      gap: 20px; /* Space between the PDFs */
+      flex-wrap: wrap; /* Allow wrapping in case the screen is too small */
+      padding: 20px;
+    }
+
+    /* PDF styling */
+    .pdf {
+      width: 30%; /* Each PDF takes up 30% of the container width */
+      height: 500px; /* Set a fixed height for the PDFs */
+      border: 2px solid #02b812; /* Green border around each PDF */
+      border-radius: 10px; /* Slightly rounded edges */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="pdf-container">
+    <!-- PDF 1 -->
+    <iframe class="pdf" src="https://emma-bq.github.io/ESRI_Images_Draft.github.io/Modelisation_connectivite_btsl_octobre2021_annexe_en.pdf" 
+            frameborder="0" title="Modelisation Connectivite - Annex 2021 (EN)"></iframe>
+
+    <!-- PDF 2 -->
+    <iframe class="pdf" src="https://emma-bq.github.io/ESRI_Images_Draft.github.io/Modelisation_connectivite_btsl_octobre2021_annexe.pdf" 
+            frameborder="0" title="Modelisation Connectivite - Annex 2021"></iframe>
+
+    <!-- PDF 3 -->
+    <iframe class="pdf" src="https://quebio.ca/sites/default/files/Annexe_2019_06_12.pdf" 
+            frameborder="0" title="Annexe 2019"></iframe>
+  </div>
+
+</body>
+</html>
